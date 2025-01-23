@@ -1,10 +1,10 @@
 import pytest
 from unittest.mock import Mock
 from tkinter import Canvas
+from my_project.main import TicTacToe
 
 @pytest.fixture
 def tic_tac_toe_instance():
-    from my_project import TicTacToe
     return TicTacToe()
 
 def test_initialize_board(tic_tac_toe_instance):
