@@ -2,7 +2,7 @@
 # Created: 12 March,2020, 7:06 PM
 # Email: aqeel.anwar@gatech.edu
 
-from tkinter import *
+from tkinter import Tk, Canvas
 import numpy as np
 
 size_of_board = 600
@@ -182,8 +182,6 @@ class TicTacToe():
 
 
 
-
-
     def click(self, event):
         grid_position = [event.x, event.y]
         logical_position = self.convert_grid_to_logical_position(grid_position)
@@ -208,6 +206,7 @@ class TicTacToe():
             self.canvas.delete("all")
             self.play_again()
             self.reset_board = False
+
 
 
 game_instance = TicTacToe()
