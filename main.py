@@ -153,7 +153,7 @@ class TicTacToe():
 
     def is_tie(self):
 
-        r, c = np.where(self.board_status == 0)
+        r, _ = np.nonzero(self.board_status == 0)
         tie = False
         if len(r) == 0:
             tie = True
@@ -210,5 +210,5 @@ class TicTacToe():
             self.reset_board = False
 
 
-game_instance = Tic_Tac_Toe()
+game_instance = TicTacToe()
 game_instance.mainloop()
